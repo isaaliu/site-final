@@ -1,0 +1,46 @@
+/* Estilos básicos para a página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffb57d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    display: flex; /* Define o contêiner como um flexbox */
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+}
+
+/* Estilo para cada card */
+.card {
+    background-color: rgba(224, 82, 0, 0.829);
+    border: 1px solid #b40e0e;
+    border-radius: 8px; /* Arredonda os cantos dos cards */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para dar um efeito de elevação */
+    flex: 1; /* Permite que os cards cresçam igualmente */
+    max-width: 300px; /* Define uma largura máxima para os cards */
+}
+
+/* Estilo para o título dos cards */
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Estilo para o parágrafo dos cards */
+.card p {
+    color: #000000;
+}
+
+.comida{
+    width: 190px;
+    height: 200px;
+}

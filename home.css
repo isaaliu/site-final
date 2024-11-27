@@ -1,0 +1,295 @@
+/* Estilos gerais da página */
+body{
+    background-color: #ffffff;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #be5600;
+    margin: 0;
+    padding: 0;
+}
+
+.slider{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position:relative;
+    
+    }
+    .slides{
+        display: flex;
+        width: 100%;
+        animation: slideAnimation 12s infinite;
+    }
+    .slide{
+        width: 100%;
+        flex-shrink: 0;
+    }
+    @keyframes slideAnimation {
+        0%{transform: translateX(0);}
+        33%{transform: translateX(-100%);}
+        66%{transform: translateX(-200%);}
+        100%{transform: translateX(0);}
+    }
+    .slide img{
+        width: 100%;
+        display: block;
+    }
+   
+
+/* Container da galeria usando Grid */
+.grid-gallery-container {
+    display: grid; /* Ativa o CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Define o grid com colunas flexíveis */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 20px;
+    margin: auto;
+}
+
+/* Cada item da galeria */
+.grid-gallery-item {
+    margin: 10px;
+    border: 2px solid #ff8234;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 430px; /* Define uma largura fixa para cada item */
+    transition: all .3s;
+   
+}
+
+/* Estilos para as imagens */
+.grid-gallery-item img {
+    width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.grid-gallery-container:hover .grid-gallery-item{
+    opacity: .5;
+}
+.grid-gallery-container .grid-gallery-item:hover {
+    opacity: 1
+}
+.grid-gallery-item:hover{
+    transform: translateY(-20px)
+}
+
+nav {
+    background-color: rgba(255, 198, 54, 0.861);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; 
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(38, 38, 38);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block; 
+    transition: color 0.3s;
+}
+.grid-gallery-item h2{
+    text-align: center;
+    font-size: 25px;
+}
+.grid-gallery-item p{
+    text-align: center;
+    font-size: 25px;
+}
+
+footer {
+    background-color: #d34605;
+    color: rgb(0, 0, 0);
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex-basis: 23%; /*Faz com que as seções ocupem 23% da largura, comlé para margens*/
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #d85e00;
+}
+
+.social-links a{
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(18, 59, 181);
+    text-decoration: none;
+    transition:color 0.3s;
+}
+
+.social-links a:hover{
+    color: #3e7ab2;
+}    
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: #d1a7d8;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* Centralizando o botão na tela */
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.button-container {
+    text-align: center;
+} 
+.button {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #e82a2a;
+    transition: all 0.2s ease;
+  }
+  
+  .button:active {
+    transform: scale(0.96);
+  }
+  
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #e82a2a 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #e82a2a 20%, transparent 30%),
+      radial-gradient(circle, #e82a2a 20%, transparent 20%),
+      radial-gradient(circle, #e82a2a 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #e82a2a 15%, transparent 20%),
+      radial-gradient(circle, #e82a2a 20%, transparent 20%),
+      radial-gradient(circle, #e82a2a 20%, transparent 20%),
+      radial-gradient(circle, #e82a2a 20%, transparent 20%),
+      radial-gradient(circle, #e82a2a 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+      radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+      radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+      radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+      radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+      radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+    
+    
+  }
